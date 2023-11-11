@@ -1,4 +1,4 @@
-import 'package:coffee_ordering_app_ui/home.dart';
+// import 'package:coffee_ordering_app_ui/home.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
@@ -69,6 +69,26 @@ class Menu extends StatelessWidget {
                   ),
                 ),
               ],
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 20,
+        ),
+        Padding(
+          padding: const EdgeInsets.all(25.0),
+          child: ListTile(
+            leading: Image.asset('assets/coffee_cup.png'),
+            title: Text(
+              "Latte",
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            trailing: Icon(
+              Icons.keyboard_arrow_right,
+              size: 30,
             ),
           ),
         ),
