@@ -1,4 +1,4 @@
-// import 'package:coffee_ordering_app_ui/home.dart';
+import 'package:coffee_ordering_app_ui/home.dart';
 import 'package:flutter/material.dart';
 
 class Menu extends StatelessWidget {
@@ -6,6 +6,13 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    List<String> coffeeTitle = [
+      "Espresso",
+      "Cappuccino",
+      "Mocha",
+      "Latte",
+      "Macchiato",
+    ];
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -41,11 +48,11 @@ class Menu extends StatelessWidget {
           ),
         ],
       ),
-      body: content(),
+      body: content(coffeeTitle),
     );
   }
 
-  Widget content() {
+  Widget content(List<String> coffeeTitle) {
     return Column(
       children: [
         SizedBox(
@@ -62,7 +69,7 @@ class Menu extends StatelessWidget {
               ),
               children: [
                 TextSpan(
-                  text: "Day for Coffee",
+                  text: " Day for Coffee.",
                   style: TextStyle(
                     color: Colors.brown,
                     fontSize: 40,
@@ -75,23 +82,28 @@ class Menu extends StatelessWidget {
         SizedBox(
           height: 20,
         ),
-        Padding(
-          padding: const EdgeInsets.all(25.0),
-          child: ListTile(
-            leading: Image.asset('assets/coffee_cup.png'),
-            title: Text(
-              "Latte",
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            trailing: Icon(
-              Icons.keyboard_arrow_right,
-              size: 30,
-            ),
-          ),
-        ),
+        ListView.builder(
+            itemCount: coffeeTitle.length,
+            shrinkWrap: true,
+            itemBuilder: ((context, index) {
+              return Padding(
+                padding: const EdgeInsets.all(25.0),
+                child: ListTile(
+                  leading: Image.asset('assets/coffee_cup.png'),
+                  title: Text(
+                    coffeeTitle[index],
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right,
+                    size: 30,
+                  ),
+                ),
+              );
+            }))
       ],
     );
   }
