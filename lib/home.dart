@@ -22,10 +22,10 @@ Widget content(BuildContext context) {
           child: Image.asset('assets/logo.png'),
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 30,
       ),
-      Text(
+      const Text(
         'CAFFEINATED',
         style: TextStyle(
           color: Colors.brown,
@@ -33,7 +33,7 @@ Widget content(BuildContext context) {
           fontStyle: FontStyle.italic,
         ),
       ),
-      SizedBox(
+      const SizedBox(
         height: 100,
       ),
       GestureDetector(
@@ -45,7 +45,7 @@ Widget content(BuildContext context) {
             borderRadius: BorderRadius.circular(20),
             color: Colors.brown,
           ),
-          child: Center(
+          child: const Center(
             child: Text(
               'Get Started',
               style: TextStyle(

@@ -5,10 +5,9 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-       
         routes: {
-          "/": (context) => Home(),
-          "/menu": ((context) => Menu()),
+          "/": (context) => const Home(),
+          "/menu": ((context) => const Menu()),
         },
       ),
     );
