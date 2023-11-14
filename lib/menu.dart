@@ -97,9 +97,12 @@ class Menu extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  trailing: Icon(
-                    Icons.keyboard_arrow_right,
-                    size: 30,
+                  trailing: GestureDetector(
+                    onTap: (() => Navigator.of(context).pushNamed('/details')),
+                    child: Icon(
+                      Icons.keyboard_arrow_right,
+                      size: 30,
+                    ),
                   ),
                 ),
               );
