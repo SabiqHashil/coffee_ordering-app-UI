@@ -1,3 +1,4 @@
+import 'package:coffee_ordering_app_ui/widgetes/common_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -148,6 +149,12 @@ class Details extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            height: 80,
+          ),
+          GestureDetector(
+              onTap: (() => Navigator.of(context).pushNamed("/summary")),
+              child: submitButton("Add to cart")),
         ],
       ),
     );

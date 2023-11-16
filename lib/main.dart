@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: "/summary",
+        // initialRoute: "/summary",
         routes: {
           "/": (context) => const Home(),
           "/menu": ((context) => const Menu()),
